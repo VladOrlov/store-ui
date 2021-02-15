@@ -1,0 +1,16 @@
+#saveButton{
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+#cancelButton{
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+#button-section{
+  text-align: center;
+  margin: 20px;
+  align-self: center;
+  display: inline-block;
+}

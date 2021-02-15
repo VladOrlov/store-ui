@@ -1,0 +1,54 @@
+<div class="main-content">
+  <div class="section-content section-content-p20">
+    <div class="products-edit-table">
+      <div class="border">
+        <button class="btn btn-success btn-primary" (click)="openAddNewProductForm()">
+          <i class="fa fa-plus-circle"></i> Add new product</button>
+      </div>
+      <table class="table table-dark table-striped header-fixed">
+        <thead align="center">
+        <tr>
+          <th>Id</th>
+          <th>Sku</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Amount</th>
+          <!--    <th>Description</th>-->
+          <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let product of products" align="center">
+          <td>{{ product.id }}</td>
+          <td>
+            <div contenteditable>{{ product.sku }}</div>
+          </td>
+          <td>
+            <div contenteditable>{{ product.name }}</div>
+          </td>
+          <td>
+            <div contenteditable>{{ product.category }}</div>
+          </td>
+          <td>
+            <div contenteditable>{{ product.price }}</div>
+          </td>
+          <td>
+            <div contenteditable>{{ product.amount }}</div>
+          </td>
+          <!--    <td><div contenteditable>{{ product.description }}</div></td>-->
+          <td>
+            <button class="btn btn-sm btn-warning" (click)="openEditForm(product.id)">
+              <i  class="fa fa-edit"></i>Edit
+            </button> &nbsp;
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product);">
+              <i class="fa fa-trash-alt"></i>Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

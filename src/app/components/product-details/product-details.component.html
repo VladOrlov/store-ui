@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <img src="{{ product.imageUrl }}" class="detail-img">
+    <h2>{{ product.name }}</h2>
+    <div class="price">{{ product.price | currency: 'USD'}}</div>
+
+    <br>
+    <br>
+    <div id="price-section">
+    <h5>In stock: </h5>
+    <div class="amount">{{ product.amount }}</div>
+    </div>
+    <br>
+
+    <a href="#" class="primary-btn"><i class="fa fa-cart-arrow-down">  Add to cart</i></a>
+
+    <hr>
+    <h3>Description</h3>
+    <p>{{ product.description }}</p>
+
+    <br>
+    <br>
+    <button routerLink="/category/{{ product.category }}" class="btn btn-sm btn-secondary">Back to Product List</button>
+  </div>
+</div>

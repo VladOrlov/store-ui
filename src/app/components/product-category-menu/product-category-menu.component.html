@@ -1,0 +1,12 @@
+<div class="menu-sidebar-content js-scrollbar1">
+  <nav class="navbar-sidebar">
+    <ul class="list-group-horizontal-lg navbar-list">
+      <li *ngFor="let productCategory of productCategories">
+        <a routerLink="/category/{{productCategory}}" routerLinkActive="active-link">{{productCategory.toUpperCase()}}</a>
+      </li>
+      <li>
+        <a routerLink="/admin-panel/products" routerLinkActive="active-link">ADMIN&nbsp;PANEL</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,138 @@
+<div class="main-content page-m">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+
+      <form [formGroup]="productEditForm" (ngSubmit)="updateProduct()">
+
+        <div class="row">
+          <div class="col-md-2"> <label>Id</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+              <input type="text" id="id" formControlName="id" class="form-control" name="id" readonly>
+              </div>
+            </div>
+          </div>
+
+<!--        SKU-->
+        <div class="row">
+          <div class="col-md-2"> <label>Sku</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+<!--              <input type="text" id="sku" class="form-control" name="sku" ngModel value="{{ product.sku }}">-->
+              <input type="text" id="sku" formControlName="sku" class="form-control" name="sku">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Name</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+              <input type="text" id="name" formControlName="name" class="form-control" name="name">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Category</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+              <input type="text" id="category" formControlName="category" class="form-control" name="category">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Amount</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+<!--              <input type="number" id="amount" class="form-control" name="amount" ngModel value="{{ product.amount }}">-->
+              <input type="number" id="amount" formControlName="amount" class="form-control" name="amount">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Price</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+<!--              <input type="text" id="price" class="form-control" name="price" ngModel value="{{ product.price }}">-->
+              <input type="number" id="price" placeholder="0.00" step="0.01" formControlName="price" class="form-control" name="price">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Image URL</label></div>
+          <div class="col-md-9">
+            <div class="input-space">
+<!--              <input type="text" id="imageUrl" class="form-control" name="ImageUrl" ngModel value="{{ product.imageUrl }}">-->
+              <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control" name="ImageUrl">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"> <label>Description</label></div>
+          <div class="col-md-9">
+<!--            <textarea id="description" class="form-control" name="description" ngModel maxlength="1024" value="{{ product.description }}">-->
+            <textarea id="description" formControlName="description" class="form-control" name="description" maxlength="1024" rows="5">
+
+            </textarea>
+          </div>
+        </div>
+
+        <!--            <div class="input-space-description">-->
+        <!--              <input formControlName="description" type="text" placeholder="Autosize" maxlength="1024" value="{{ product.description }}">-->
+        <!--            </div>-->
+        <!--        &lt;!&ndash; submit button&ndash;&gt;-->
+        <br>
+<!--        <div class="text-center">-->
+<!--          <button type="submit" class="btn btn-info">Save changes</button>-->
+<!--        </div>-->
+
+        <div class="section-content button-section" id="button-section">
+          <button id="saveButton" type="submit" class="btn btn-info" [disabled]="!productEditForm.valid">
+            Save changes
+          </button>
+          <button id="cancelButton" type="submit" class="btn btn-danger" (click)=cancelChanges()>
+            Cancel
+          </button>
+        </div>
+
+      </form>
+
+  </div>
+</div>
+
+<!--<div class="panel panel-primary">-->
+<!--  <div class="panel-heading">-->
+<!--    Edit {{product.name}}-->
+<!--  </div>-->
+
+<!--  <div class="panel-body">-->
+<!--    <form class="form-horizontal" novalidate>-->
+<!--&lt;!&ndash;      (ngSubmit)="saveProduct()&ndash;&gt;-->
+
+
+<!--  <div class="section-content section-content-p30">-->
+
+<!--    <form>-->
+<!--      <label for="fname">First name:</label><br>-->
+<!--      <input type="text" id="fname" name="fname"><br>-->
+<!--      <label for="lname">Last name:</label><br>-->
+<!--      <input type="text" id="lname" name="lname">-->
+<!--    </form>-->
+<!--    -->
+
+<!--    <h2>{{ product.name }}</h2>-->
+<!--    <div class="price">{{ product.price | currency: 'USD'}}</div>-->
+<!--    <a href="#" class="primary-btn"><i class="fa fa-cart-arrow-down">  Add to cart</i></a>-->
+
+<!--    <hr>-->
+<!--    <h3>Description</h3>-->
+<!--    <p>{{ product.description }}</p>-->
+
+<!--    <button routerLink="/products" class="btn btn-sm btn-secondary">Back to Product List</button>-->
+<!--  </div>-->
+<!--</div>-->
